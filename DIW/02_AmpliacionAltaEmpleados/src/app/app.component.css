@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    border: 1px black solid;
+    padding: 10px;
+    background-color: lightblue;
+    width: 500px;
+}
+
+.wrapper h2{
+    margin-left: 5%;
+}
+
+h2{
+    font-style: italic;
+    font-size: 40px;
+}
+
+.form{
+   margin-top: 50px;
+}
+
+.form label, input{
+    width: 90%;
+    display: flex;
+    margin: auto;
+}
+
+.form button{
+    display: block;
+    margin-left: 5%;
+    background-color: green;
+    color: white;
+    width: 60px;
+}
+
+.listaEmpleados{
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px black solid;
+    background-color: lightblue;
+    width: 500px;
+}
+
+
+.directora {
+    color: red;
+}
+
+.botones {
+    color: green;
+}

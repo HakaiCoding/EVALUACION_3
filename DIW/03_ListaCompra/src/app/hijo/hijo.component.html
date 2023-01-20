@@ -1,0 +1,4 @@
+<div id="foodItem">
+    <p [ngClass]="{foodNotAdded: addItemCheck === false, foodAdded: addItemCheck === true}">{{food}}</p>
+    <button (click)="toggleItem(); addFoodItem(food); addFlagItem()" [class]="buttonStyle">{{buttonText}}</button>
+</div>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <h2>Alta de empleados</h2>
+    <div class="form">
+      <label for="name">Nombre:</label>
+      <input type="text" placeholder="nombre" #name>
+      <label for="surname">Apellido:</label>
+      <input type="text" placeholder="apellido" #surname>
+      <label for="rol">Cargo:</label>
+      <input type="text" placeholder="cargo" #rol>
+      <label for="salary">Salario:</label>
+      <input type="number" placeholder="0" #salary><br><br><br>
+      <button type="submit" (click)="crearEmpleado(
+        name.value,
+        surname.value,
+        rol.value,
+        salary.value)">Agregar</button>
+    </div>
+  </div>
+  <div class="listaEmpleados">
+    <h3>Lista empleados en Componente Hijo</h3>
+    <ng-container *ngFor="let empleado of empleados; let i = index">
+      <app-hijo [empleado]="empleado" [i]="i"></app-hijo>
+    </ng-container>
+  </div>
+</body>
+
+</html>

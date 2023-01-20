@@ -1,0 +1,14 @@
+<p class="datosEmpleado" (click)="test()" appdirectivaLi *ngIf="i % 5 !== 0 || i === 0; else linea"
+    [ngStyle]="{color: azulPares(i)}">{{i+1}} {{empleado.name}} {{empleado.surname}} {{empleado.salary}}
+    <span
+        [ngClass]="{directora: empleado.rol === 'Directora', botones: empleado.rol === 'Botones'}">{{empleado.rol}}</span>
+</p>
+<ng-template #linea>
+    <hr>
+    <br>
+    <p class="datosEmpleado" [ngStyle]="{color: azulPares(i)}">{{i+1}} {{empleado.name}} {{empleado.surname}}
+        {{empleado.salary}}
+        <span
+            [ngClass]="{directora: empleado.rol === 'Directora', botones: empleado.rol === 'Botones'}">{{empleado.rol}}</span>
+    </p>
+</ng-template>

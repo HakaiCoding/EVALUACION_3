@@ -1,0 +1,8 @@
+<div id="itemList">
+    <h2>Lista de la compra</h2>
+    <app-hijo *ngFor="let food of foodArray" [food]="food" (foodItem)="showFoodItem($event)" (flagItem)="showFlagItem($event)"></app-hijo>
+    <div>{{childFoodItem}}
+    <img [src]="childFlagItem" alt="#" width="25" height="25">
+    </div>
+    <!-- <p>{{childFoodItem}}{{childFlagItem}}</p> -->  
+</div>

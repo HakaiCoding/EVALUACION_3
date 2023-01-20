@@ -1,0 +1,37 @@
+#foodItem{
+    border: 3px solid #418cfc;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.add{
+    background-color: #ca2727;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid black;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+}
+
+.remove{
+    background-color: #27ca7e;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid black;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+}
+
+.foodNotAdded{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.foodAdded {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-decoration: line-through;
+}
