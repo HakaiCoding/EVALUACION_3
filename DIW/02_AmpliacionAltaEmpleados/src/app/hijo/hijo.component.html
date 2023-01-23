@@ -3,6 +3,12 @@
     <span
         [ngClass]="{directora: empleado.rol === 'Directora', botones: empleado.rol === 'Botones'}">{{empleado.rol}}</span>
 </p>
+<ul style="list-style: none;">
+    <li *ngFor="let caracteristica of arrayCaract">
+        {{caracteristica}}
+    </li>
+</ul>
+<app-carac-emp (caractemp)="anadirCaract($event)"></app-carac-emp>
 <ng-template #linea>
     <hr>
     <br>
@@ -11,4 +17,10 @@
         <span
             [ngClass]="{directora: empleado.rol === 'Directora', botones: empleado.rol === 'Botones'}">{{empleado.rol}}</span>
     </p>
+    <ul style="list-style: none;">
+        <li *ngFor="let caracteristica of arrayCaract">
+            {{caracteristica}}
+        </li>
+    </ul>
+    <app-carac-emp (caractemp)="anadirCaract($event)"></app-carac-emp>
 </ng-template>
