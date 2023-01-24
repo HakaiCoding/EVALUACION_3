@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ProveedoresService } from '../servicios/proveedores.service';
+
 
 
 @Component({
@@ -9,12 +9,21 @@ import { ProveedoresService } from '../servicios/proveedores.service';
 })
 export class EtiquetaComponent implements OnInit {
 
-  proveedores: any;
 
-  constructor(private proveedoresService: ProveedoresService) { }
+  //Input que recibe el CIF del proveedor desde el componente Proveedores
+  @Input() cifProveedor: any;
+
+  //Input que recibe variable booleana desde el componente Proveedores para manejar la visibilidad del componente Etiqueta
+  @Input() toggleImprimirEtiqueta: boolean = false;
+
+
+  //Input que recibe el array de proveedores desde el componente Proveedores
+  @Input() proveedores: any;
+
+  constructor() { }
 
   ngOnInit(): void {
-    this.proveedores = this.proveedoresService.getProveedores();
+    
   }
 
 }

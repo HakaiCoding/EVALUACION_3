@@ -1,21 +1,27 @@
-<!-- <p>{{mensaje}}</p> -->
 <h3>Listado de Proveedores</h3>
-<table class="table table-bordered table-striped tabla" style="margin-top: 40px;">
+<table class="table table-bordered table-striped tabla" style="margin-top: 40px; text-align: center">
     <thead>
         <tr class="filters">
             <th>Nombre</th>
             <th>Correo Electrónico</th>
             <th>Telefono</th>
+            <th>Etiqueta</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let proveedor of proveedores">
-            <td>{{ proveedor.nombre }}</td>
-            <td><a href="mailto:{{ proveedor.email }}">{{ proveedor.email
-                    }}</a></td>
-            <td>{{ proveedor.telefono }}</td>
-            <td><button (click)="getCifProveedor(proveedor.cif)">Mostrar Info</button></td>
+            <td>{{proveedor.nombre}}</td>
+            <td>
+                <a href="mailto:{{ proveedor.email }}">{{ proveedor.email}}</a>
+            </td>
+            <td>{{proveedor.telefono}}</td>
+            <td>
+                <button *ngIf="toggleImprimirEtiqueta === false" (click)="getCifProveedor(proveedor.cif)" (click)="toggleButton()">Imprimir Etiqueta</button>
+                <button *ngIf="toggleImprimirEtiqueta" (click)="toggleButton()">Ocultar Etiqueta</button>
+
+            </td>
         </tr>
     </tbody>
 </table>
-<app-etiqueta></app-etiqueta>
+<app-etiqueta [proveedores]="proveedores" [cifProveedor]="cifProveedor" [toggleImprimirEtiqueta]="toggleImprimirEtiqueta"></app-etiqueta>
+<app-clientes [proveedores]="proveedores"></app-clientes>

@@ -1,7 +1,9 @@
-<div>
-    <p>PROPIEDAD 1</p>
-    <p>PROPIEDAD 2</p>
-    <p>PROPIEDAD 3</p>
-    <p>PROPIEDAD 4</p>
-    <p>PROPIEDAD 5</p>
-</div>
+<ng-container *ngIf="toggleImprimirEtiqueta">
+    <ng-container *ngFor="let proveedor of proveedores">
+        <div style="border: 2px solid black; width: 300px; padding: 10px" *ngIf="cifProveedor == proveedor.cif">
+            <p>{{proveedor.nombre}}, {{proveedor.direccion}}</p>
+            <p>{{proveedor.cp}}, {{proveedor.localidad}}</p>
+            <p>{{proveedor.provincia}}</p>
+        </div>
+    </ng-container>
+</ng-container>
