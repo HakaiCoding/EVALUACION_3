@@ -21,7 +21,7 @@ button.addEventListener("click", function (event) {
             });
 
             randomNumberPromise
-                .then(function (number) { console.log("Ha salido un número correcto: " + number); })
+                .then(function (number) { console.log(`Ha salido un número correcto, ${number}`); })
                 .catch(function (error) { console.log(error.message); });
         }
     }

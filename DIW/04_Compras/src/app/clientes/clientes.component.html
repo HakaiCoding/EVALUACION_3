@@ -1,43 +1,47 @@
 <h3 style="margin-top: 5%">Listado de Clientes</h3>
-<table class="table table-bordered table-striped tabla" style="margin-top: 40px; text-align: center">
-    <thead>
-        <tr class="filters">
-            <th>Código Cliente</th>
-            <th>Nombre</th>
-            <th>Dirección</th>
-            <th>Correo</th>
-            <th>NIF Proveedor Energía</th>
-            <th>Datos Proveedor</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let cliente of clientes">
-            <td>{{cliente.codCliente}}</td>
-            <td>{{cliente.nombre}}</td>
-            <td>{{cliente.direccion}}</td>
-            <td>
-                <a href="mailto:{{ cliente.email }}">{{ cliente.email}}</a>
-            </td>
-            <td>{{cliente.NIF_proveedor_energia}}</td>
-            <td>
-                <button (click)="getCifProveedorCliente(cliente.NIF_proveedor_energia)">Mostrar datos proveedor</button>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="wrapper">
+    <table class="table table-bordered table-striped tabla" style="margin-top: 40px; text-align: center">
+        <thead>
+            <tr class="filters">
+                <th>Código Cliente</th>
+                <th>Nombre</th>
+                <th>Dirección</th>
+                <th>Correo</th>
+                <th>NIF Proveedor Energía</th>
+                <th>Datos Proveedor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cliente of clientes">
+                <td>{{cliente.codCliente}}</td>
+                <td>{{cliente.nombre}}</td>
+                <td>{{cliente.direccion}}</td>
+                <td>
+                    <a href="mailto:{{ cliente.email }}">{{ cliente.email}}</a>
+                </td>
+                <td>{{cliente.NIF_proveedor_energia}}</td>
+                <td>
+                    <button (click)="getCifProveedorCliente(cliente.NIF_proveedor_energia)">Mostrar datos
+                        proveedor</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 
-<ng-container *ngFor="let proveedor of proveedores">
-    <div style="border: 2px solid black; width: 300px; padding: 10px"*ngIf="proveedor.cif == cifProveedorCliente">
-        <p>Nombre: {{proveedor.nombre}}</p>
-        <p>NIF: {{proveedor.cif}}</p>
-        <p>Tlfno: {{proveedor.telefono}}</p>
-        <button *ngIf="showMoreInfo == false" (click)="toggleShowMoreInfo()">Más...</button>
-        <ng-container *ngIf="showMoreInfo">
-            <p>Dirección: {{proveedor.direccion}}</p>
-            <p>CP: {{proveedor.cp}}</p>
-            <p>Localidad: {{proveedor.localidad}}</p>
-            <p>Provincia: {{proveedor.provincia}}</p>
-            <p>Correo: {{proveedor.email}}</p>
-            <button *ngIf="showMoreInfo" (click)="toggleShowMoreInfo()">Menos...</button>
-</ng-container>
-
+    <ng-container *ngFor="let proveedor of proveedores">
+        <div style="border: 2px solid black; width: 300px; padding: 10px" *ngIf="proveedor.cif == cifProveedorCliente">
+            <p>Nombre: {{proveedor.nombre}}</p>
+            <p>NIF: {{proveedor.cif}}</p>
+            <p>Tlfno: {{proveedor.telefono}}</p>
+            <button *ngIf="showMoreInfo == false" (click)="toggleShowMoreInfo()">Más...</button>
+            <ng-container *ngIf="showMoreInfo">
+                <p>Dirección: {{proveedor.direccion}}</p>
+                <p>CP: {{proveedor.cp}}</p>
+                <p>Localidad: {{proveedor.localidad}}</p>
+                <p>Provincia: {{proveedor.provincia}}</p>
+                <p>Correo: {{proveedor.email}}</p>
+                <button *ngIf="showMoreInfo" (click)="toggleShowMoreInfo()">Menos...</button>
+            </ng-container>
+        </div>
+    </ng-container>
+</div>

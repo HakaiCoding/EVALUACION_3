@@ -1,30 +1,9 @@
 let socios = [
-    {
-        nombre: 'Marta',
-        edad: 15,
-        nivel: 'C',
-        ciudad: 'Villalba'
-    },
-    {
-        nombre: 'Max',
-        edad: 32,
-        nivel: 'B',
-        ciudad: 'Alpedrete'
-    },
-    {
-        nombre: 'Julián',
-        edad: 9,
-        nivel: 'D',
-        ciudad: 'Alpedrete'
-    },
-    {
-        nombre: 'Amadeo',
-        edad: 16,
-        nivel: 'A',
-        ciudad: 'Villalba'
-    }
+    { nombre: 'Marta', edad: 15, nivel: 'C', ciudad: 'Villalba' },
+    { nombre: 'Max', edad: 32, nivel: 'B', ciudad: 'Alpedrete' },
+    { nombre: 'Julián', edad: 9, nivel: 'D', ciudad: 'Alpedrete' },
+    { nombre: 'Amadeo', edad: 16, nivel: 'A', ciudad: 'Villalba' }
 ];
-
 
 let nombreSocio = document.getElementById("nombreSocio");
 let nivelSocio = "";
@@ -39,7 +18,7 @@ nombreSocio.addEventListener("keydown", function (event) {
         for (let i = 0; i < socios.length; i++) {
             if (socios[i].nombre === nombreSocio.value) {
                 existe = true;
-                edadSocio = socios[i].edad;
+                nivelSocio = socios[i].nivel;
                 ciudadSocio = socios[i].ciudad;
             }
         }
@@ -82,7 +61,6 @@ nombreSocio.addEventListener("keydown", function (event) {
             //Añadir div al body
             document.body.appendChild(div);
         }
-
     }
 });
 
