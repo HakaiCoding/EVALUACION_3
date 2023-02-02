@@ -1,4 +1,4 @@
-// Creacion de array de productos
+// Creacion de array productos con objetos
 let productos = [
     { referencia: "1", titulo: "Producto 1", foto: "https://picsum.photos/200/300", precio: 10 },
     { referencia: "2", titulo: "Producto 2", foto: "https://picsum.photos/200/301", precio: 20 },

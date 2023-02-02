@@ -33,7 +33,6 @@ let numeros = [
 idInput = document.getElementById("idNumber");
 
 
-
 // CON PROMESAS (FUNCIONES NORMALES)
 idInput.addEventListener("change", function () {
     let id = idInput.value;
@@ -57,7 +56,7 @@ idInput.addEventListener("change", function () {
             });
             promise2
                 .then(function (num) {
-                    alert(`El usuario ${user.nombre} tiene el número ${num.num}`);
+                    alert(`El usuario ${user.nombre} tiene el número de teléfono ${num.num}`);
                 })
                 .catch(function (err) {
                     alert(err);

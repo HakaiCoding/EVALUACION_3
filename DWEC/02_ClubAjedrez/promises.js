@@ -9,6 +9,7 @@ let nombreSocio = document.getElementById("nombreSocio");
 let nivelSocio = "";
 let ciudadSocio = "";
 
+//Función que comprueba si el socio existe
 let checkSocio = (nombre) => {
     return new Promise((resolve, reject) => {
         for (let i = 0; i < socios.length; i++) {
