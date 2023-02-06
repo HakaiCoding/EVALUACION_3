@@ -1,0 +1,11 @@
+<div id="portfolio--wrapper">
+    <div id="portfolio--container">
+        <h2>P o r t f o l i o</h2>
+        <ng-container *ngFor="let cocina of cocinas">
+            <div class="cocina--card">
+                <img src="{{cocina.img}}" />
+                <p>{{cocina.desc}}</p>
+            </div>
+        </ng-container>
+    </div>
+</div>

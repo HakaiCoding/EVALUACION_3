@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    font-size: 3rem;
+    padding: 2%;
+    margin-left: 16.5%;
+}
+
+#portfolio--wrapper {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.cocina--card {
+    margin: 0 auto;
+    width: 85%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    padding: 10px;
+}
+
+.cocina--card img {
+    border: 2px solid white;
+    width: 50%;
+}
+
+.cocina--card p {
+    color: whitesmoke;
+    line-height: 35px;
+    font-size: 1rem;
+}

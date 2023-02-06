@@ -1,0 +1,17 @@
+<div id="home--wrapper">
+    <div id="home--container">
+        <div class="home--container--box">
+            <h1>Hello, Welcome to my Portfolio</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum ratione veritatis, dolorem a distinctio
+                harum dolor cupiditate, libero atque expedita unde odio consectetur numquam. Atque accusamus, asperiores
+                nisi odit, blanditiis facilis porro odio quas tempore molestiae corrupti voluptate. Voluptatem dolorem
+                qui omnis expedita culpa cum delectus atque, unde veniam itaque?</p>
+            <button class="moreButton">More About Me</button>
+        </div>
+        <div class="home--container--grid">
+            <ng-container *ngFor="let cocina of cocinas">
+                <img src="{{cocina.img}}">
+            </ng-container>
+        </div>
+    </div>
+</div>
