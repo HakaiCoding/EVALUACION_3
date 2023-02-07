@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+#contact--wrapper {
+    border: 1px solid red;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#contact--container {
+    border: 1px solid green;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 5rem;
+    padding: 30px;
+
+}
+
+#contact--container h2 {
+    border: 1px solid blue;
+    color: whitesmoke;
+    font-size: 3rem;
+    padding: 10px;
+    width: 80%;
+    margin-left: 3%;
+}
+
+.contact--container--box {
+    border: 1px solid pink;
+    width: 50%;
+    padding: 10px;
+    margin-left: 2%;
+}
+
+.contact--form {
+    border: 1px solid yellow;
+    padding: 10px;
+}
+
+.contact--form label {
+    line-height: 1.5em;
+}
+
+.contact--form input, textarea {
+    background-color: white;
+    border-radius: 5px;
+    width: 70%;
+    padding: 5px;
+}
+
+.contact--form textarea {
+    height: 15em;
+}
+
+.sendMessageButton {
+    cursor: pointer;
+    margin-left: 22.5%;
+}
+
+* {
+    border: none !important;
+}
