@@ -1,0 +1,37 @@
+audio,
+button {
+    transition: all 0.5s linear;
+    box-shadow: 2px 2px 4px 0px #006773;
+    border-radius: 7px;
+    padding: 0, 5%;
+}
+
+section {
+    padding: 1%;
+    margin-left: 1%;
+    margin-top: 1%;
+    border: #006773;
+    border-style: groove;
+    border-radius: 7px;
+    display: flexbox;
+    flex-wrap: wrap;
+    width: min-content;
+}
+
+section>audio {
+    width: 239pt;
+}
+
+section:hover {
+    transition: all 0.5s linear;
+    box-shadow: 2px 2px 4px 0px #c7d8da;
+    transform: scale(1.05);
+}
+
+audio:hover,
+audio:focus,
+audio:active,
+button:hover {
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05);
+}
