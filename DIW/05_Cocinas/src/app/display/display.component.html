@@ -1,0 +1,15 @@
+<ng-container *ngFor="let cocina of cocinas">
+    <ng-container>
+        <div *ngIf="refCocina == cocina.ref" id="display--container">
+            <img src="{{cocina.img}}" />
+            <p>{{cocina.desc}}</p>
+        </div>
+    </ng-container>
+</ng-container>
+<ng-container *ngFor="let cocina of cocinas">
+    <div class="box--button" *ngIf="refCocina == cocina.ref">
+        <button routerLink="/">HOME</button>
+        <button (click)="goBack()">ATRAS</button>
+        <button (click)="precio(cocina.ref)">MOD PRECIO</button>
+    </div>
+</ng-container>

@@ -5,7 +5,6 @@
 }
 
 #home--wrapper {
-    border: 1px solid red;
     width: 80%;
     height: 100%;
     margin: 0 auto;
@@ -13,7 +12,6 @@
 }
 
 #home--container {
-    border: 1px solid green;
     width: 100%;
     display: grid;
     grid-template-rows: 1fr;
@@ -22,7 +20,6 @@
 }
 
 .home--container--box {
-    border: 1px solid blue;
     width: 75%;
     margin: 0 auto;
     padding: 10px;
@@ -32,12 +29,10 @@
 }
 
 .home--container--box h1 {
-    border: 1px solid skyblue;
     padding: 10px;
 }
 
 .home--container--box p {
-    border: 1px solid skyblue;
     padding: 10px;
     line-height: 30px;
     color: gray;
@@ -46,7 +41,7 @@
 .home--container--box button {
     width: 8em;
     padding: 5px;
-    margin-left: 0.5%;
+    margin-left: 1%;
     border: none;
     background-color: white;
     color: black;
@@ -56,7 +51,6 @@
 }
 
 .home--container--grid {
-    border: 1px solid yellow;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -68,8 +62,5 @@
 
 .home--container--grid img {
     width: 100%;
-}
-
-* {
-    border: none !important;
+    border: 2px solid gray;
 }

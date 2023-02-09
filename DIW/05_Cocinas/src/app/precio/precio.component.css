@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#precio--wrapper {
+    margin: 0 auto;
+    margin-top: 3%;
+    width: 80%;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    padding: 20px;
+}
+
+.precio--container {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    padding: 20px;
+}
+
+.box--button {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+}
+
+.box--button button {
+    cursor: pointer;
+    width: 9em;
+    padding: 5px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+    font-size: 0.8rem;
+}

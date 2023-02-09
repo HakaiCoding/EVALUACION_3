@@ -5,14 +5,12 @@
 }
 
 #contact--wrapper {
-    border: 1px solid red;
     width: 80%;
     margin: 0 auto;
     padding: 10px;
 }
 
 #contact--container {
-    border: 1px solid green;
     width: 100%;
     display: grid;
     grid-template-rows: 1fr;
@@ -22,7 +20,6 @@
 }
 
 #contact--container h2 {
-    border: 1px solid blue;
     color: whitesmoke;
     font-size: 3rem;
     padding: 10px;
@@ -31,14 +28,12 @@
 }
 
 .contact--container--box {
-    border: 1px solid pink;
     width: 50%;
     padding: 10px;
     margin-left: 2%;
 }
 
 .contact--form {
-    border: 1px solid yellow;
     padding: 10px;
 }
 
@@ -59,9 +54,5 @@
 
 .sendMessageButton {
     cursor: pointer;
-    margin-left: 22.5%;
-}
-
-* {
-    border: none !important;
+    margin-left: 25%;
 }

@@ -1,0 +1,13 @@
+<div id="precio--wrapper">
+    <ng-container *ngFor="let cocina of cocinas">
+        <div class="precio--container" *ngIf="refCocina == cocina.ref">
+            <h2>Cocina '{{cocina.name}}' con referencia '{{cocina.ref}}'</h2><br><br>
+            <p>Precio actual: {{cocina.price}}€</p><br>
+            <input type="text" [(ngModel)]="newPrice" /><br><br>
+            <div class="box--button">
+                <button (click)="modPrice(cocina.ref)">CAMBIAR PRECIO</button>
+                <button routerLink="/portfolio">CERRAR</button>
+            </div>
+        </div>
+    </ng-container>
+</div>

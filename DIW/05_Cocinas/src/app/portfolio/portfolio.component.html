@@ -3,7 +3,7 @@
         <h2>P o r t f o l i o</h2>
         <ng-container *ngFor="let cocina of cocinas">
             <div class="cocina--card">
-                <img src="{{cocina.img}}" />
+                <img (dblclick)="display(cocina.ref)" class="cocina--img" src="{{cocina.img}}" />
                 <p>{{cocina.desc}}</p>
             </div>
         </ng-container>
