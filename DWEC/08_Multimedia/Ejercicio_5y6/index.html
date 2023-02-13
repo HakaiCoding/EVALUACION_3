@@ -13,11 +13,14 @@
 
     <div id="wrapper">
         <div id="player--container">
-            <p class="currentVolume">Vol: --------------</p>
+            <div id="volume--control">
+                <p class="currentVolume">Vol:</p><input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+            </div>
             <p id="current--song">No estás reproduciendo ninguna canción</p>
             <h3 class="title">Mi música</h3>
             <ol id="song--list">
             </ol>
+            <audio id="play--song"></audio>
         </div>
     </div>
 

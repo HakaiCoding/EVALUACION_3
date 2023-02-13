@@ -13,6 +13,15 @@ let songList = document.getElementById("song--list");
 
 let currentSong = document.getElementById("current--song");
 
+let audio = document.getElementById("play--song");
+
+let volumeRange = document.getElementById("volume");
+
+volumeRange.addEventListener("change", function (event) {
+    audio.volume = event.target.value / 10;
+});
+
+
 //Bucle for para recorrer el array songs, y añadir cada elemento del array a la lista
 for (let i = 0; i < songs.length; i++) {
 
@@ -28,6 +37,11 @@ for (let i = 0; i < songs.length; i++) {
         //Cambia el texto del elemento currentSong
         currentSong.innerHTML = "Reproduciendo: ";
         currentSong.innerHTML += event.target.innerHTML;
+
+        //Cambia el atributo src del elemento audio
+        audio = document.getElementById("play--song");
+        audio.setAttribute("src", "Music/" + event.target.innerHTML);
+        audio.play();
 
         //Cuando otro elemento de la lista es seleccionado, se cambia el color del anterior a blanco
         for (let j = 0; j < songs.length; j++) {
