@@ -9,20 +9,36 @@ const songs = [
     "Whatsup.mp3"
 ];
 
-let songList = document.getElementById("song--list");
+//Evento que muestra en segundos la duración de la canción
+let audio = document.getElementById("player");
+let currerntDuration = document.getElementById("current-duration");
+audio.addEventListener("loadedmetadata", function () {
+    currerntDuration.innerHTML = "0:00 / " + formatTime(audio.duration);
+});
 
-let currentSong = document.getElementById("current--song");
+function formatTime(seconds) {
+    let minutes = Math.floor(seconds / 60);
+    let secs = Math.floor(seconds % 60);
+    if (secs < 10) {
+        secs = "0" + secs;
+    }
+    return minutes + ":" + secs;
+}
 
-let audio = document.getElementById("play--song");
 
 let volumeRange = document.getElementById("volume");
-
 volumeRange.addEventListener("change", function (event) {
     audio.volume = event.target.value / 10;
 });
 
+//Evento change al elemento progress para que cambie la posición de la canción
+let progress = document.getElementById("progress");
+progress.addEventListener("change", function (event) {
+    audio.currentTime = event.target.value * audio.duration;
+});
 
 //Bucle for para recorrer el array songs, y añadir cada elemento del array a la lista
+let songList = document.getElementById("song-list");
 for (let i = 0; i < songs.length; i++) {
 
     let song = document.createElement("li");
@@ -30,27 +46,34 @@ for (let i = 0; i < songs.length; i++) {
     song.appendChild(songName);
     songList.appendChild(song);
 
-    //Añadir evento click a cada elemento de la lista
+    //Evento click a cada elemento de la lista
     song.addEventListener("click", function (event) {
         event.target.style.color = "yellow";
 
         //Cambia el texto del elemento currentSong
+        let currentSong = document.getElementById("current-song");
         currentSong.innerHTML = "Reproduciendo: ";
         currentSong.innerHTML += event.target.innerHTML;
 
         //Cambia el atributo src del elemento audio
-        audio = document.getElementById("play--song");
+        audio = document.getElementById("player");
         audio.setAttribute("src", "Music/" + event.target.innerHTML);
         audio.play();
 
-        //Cuando otro elemento de la lista es seleccionado, se cambia el color del anterior a blanco
+        //Cuando otro elemento de la lista es seleccionado, se cambia el color del anterior a negro
         for (let j = 0; j < songs.length; j++) {
             if (event.target.innerHTML != songs[j]) {
                 songList.children[j].style.color = "black";
             }
         }
 
-        
     });
 
 }
+
+audio.addEventListener("timeupdate", function () {
+    let progress = document.getElementById("progress");
+    progress.value = audio.currentTime / audio.duration;
+    let currentSongTime = document.getElementById("current-duration");
+    currentSongTime.innerHTML = formatTime(audio.currentTime) + " / " + formatTime(audio.duration);
+});

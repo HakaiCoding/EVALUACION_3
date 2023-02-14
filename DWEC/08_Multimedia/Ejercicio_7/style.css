@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+    height: 95vh;
+    display: grid;
+    place-content: center;
+}
+
+#player-box {
+    width: 640px;
+    height: 360px;
+    background-color: #000;
+    margin: 0 auto;
+}
+
+#progress-bar {
+    width: 640px;
+    height: 5px;
+    background-color: #ddd;
+}
+
+#progress-bar span {
+    display: block;
+    height: 100%;
+    background-color: #f00;
+}
