@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 #wrapper {
@@ -16,13 +19,14 @@
 
 #player--container {
     border-radius: 2%;
-    background-color: blueviolet;
+    background: linear-gradient(to right, #FFB88C, #aa4ead);
     width: 50%;
     height: 70vh;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     padding: 20px;
+    box-shadow: 0 0 40px 0 rgba(212, 210, 210, 0.5);
 }
 
 #duration-volume--container {
@@ -32,6 +36,7 @@
 }
 
 #current-duration {
+    font-size: 2em;
     font-weight: 600;
 }
 
@@ -43,8 +48,8 @@
 }
 
 .volumeText {
-    color: white;
-    font-size: 1em;
+    color: black;
+    font-size: 1.2em;
     text-align: right;
 }
 
@@ -75,9 +80,10 @@
 }
 
 #player--container h3 {
-    color: white;
+    color: purple;
     text-align: center;
-    font-size: 2em;
+    font-size: 3em;
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -88,6 +94,7 @@
 }
 
 #player--container li {
+    font-size: 1.3em;
     cursor: pointer;
 }
 

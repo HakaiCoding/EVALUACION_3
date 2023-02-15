@@ -15,6 +15,15 @@ document.getElementById("addItem").addEventListener("click", function () {
     alimentos.push(document.getElementById("inputItem").value);
     // Guardamos/Actualizamos el array en el local storage
     localStorage.setItem("alimentos", JSON.stringify(alimentos));
+
+    // Añadimos evento doble click a cada elemento de la lista
+    li.addEventListener("dblclick", function (event) {
+        alimentos.splice(alimentos.indexOf(event.target.textContent), 1);
+        li.remove();
+        // Guardamos/Actualizamos el array en el local storage
+        localStorage.setItem("alimentos", JSON.stringify(alimentos));
+    });
+
 });
 
 // For Loop que recorre el array de alimentos
@@ -24,14 +33,13 @@ for (let i = 0; i < alimentos.length; i++) {
     document.getElementById("listItem").appendChild(li);
 
     // Añadimos evento doble click a cada elemento de la lista
-    li.addEventListener("dblclick", function () {
+    li.addEventListener("dblclick", function (event) {
+        alimentos.splice(alimentos.indexOf(event.target.textContent), 1);
         li.remove();
-        alimentos.splice(i, 1);
         // Guardamos/Actualizamos el array en el local storage
         localStorage.setItem("alimentos", JSON.stringify(alimentos));
     });
 }
-
 
 // Añadimos evento click al botón "clearList"
 document.getElementById("clearList").addEventListener("click", function () {

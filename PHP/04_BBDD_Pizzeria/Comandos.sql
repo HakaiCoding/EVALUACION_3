@@ -2,14 +2,14 @@ CREATE DATABASE restaurante;
 
 USE restaurante;
 
-//Tabla CLIENTES
+--TABLAS--
 CREATE TABLE clientes (
   DNI VARCHAR(9) PRIMARY KEY,
   Nombre VARCHAR(50) NOT NULL,
-  Telefono VARCHAR(20)
+  Telefono VARCHAR(9)
 );
 
-//Tabla CREDENCIALES
+
 CREATE TABLE credenciales (
   DNI VARCHAR(9) PRIMARY KEY,
   User VARCHAR(10) UNIQUE NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE credenciales (
   FOREIGN KEY (DNI) REFERENCES clientes(DNI)
 );
 
-//TABLA PEDIDOS
+
 CREATE TABLE pedidos (
   idPedido INT PRIMARY KEY AUTO_INCREMENT,
   DNI VARCHAR(9) NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE pedidos (
   FOREIGN KEY (DNI) REFERENCES clientes(DNI)
 );
 
-//TABLA COMIDAS
+
 CREATE TABLE comidas (
   idComida INT PRIMARY KEY AUTO_INCREMENT,
   Nombre VARCHAR(50) NOT NULL,
@@ -34,21 +34,15 @@ CREATE TABLE comidas (
   Precio FLOAT NOT NULL
 );
 
-//TABLA INGREDIENTES
+
 CREATE TABLE ingredientes (
   idIngrediente INT PRIMARY KEY AUTO_INCREMENT,
   Nombre VARCHAR(50) NOT NULL,
   Calorias INT NOT NULL
 );
 
-//TABLA ALERGENOS
-CREATE TABLE alergenos (
-  idAlergeno INT PRIMARY KEY AUTO_INCREMENT,
-  Nombre VARCHAR(50) NOT NULL,
-  Icono VARCHAR(50) NOT NULL
-);
 
-//TABLA PEDIDOS_COMIDAS
+
 CREATE TABLE pedidos_comidas (
   idPedido INT NOT NULL,
   idComida INT NOT NULL,
@@ -58,7 +52,7 @@ CREATE TABLE pedidos_comidas (
   PRIMARY KEY (idPedido, idComida)
 );
 
-//TABLA COMIDAS_INGREDIENTES
+
 CREATE TABLE comidas_ingredientes (
   idComida INT NOT NULL,
   idIngrediente INT NOT NULL,
@@ -68,13 +62,56 @@ CREATE TABLE comidas_ingredientes (
   PRIMARY KEY (idComida, idIngrediente)
 );
 
-//TABLA ALERGENOS_INGREDIENTES
-CREATE TABLE alergenos_ingredientes (
-  idAlergeno INT NOT NULL,
-  idIngrediente INT NOT NULL,
-  FOREIGN KEY (idAlergeno) REFERENCES alergenos(idAlergeno),
-  FOREIGN KEY (idIngrediente) REFERENCES ingredientes(idIngrediente),
-  PRIMARY KEY (idAlergeno, idIngrediente)
-);
+--INSERTS--
+INSERT INTO clientes (DNI, Nombre, Telefono) VALUES
+("11111111A", "Victor", "111111111"),
+("22222222B", "Alberto", "222222222"),
+("33333333C", "Moleiro", "333333333");
 
 
+INSERT INTO credenciales (DNI, User, Pass) VALUES
+("11111111A", "victor", "victor"),
+("22222222B", "alberto", "alberto"),
+("33333333C", "moleiro", "moleiro")
+
+INSERT INTO comidas (Nombre, Stock, Precio) VALUES
+("Pizza", 10, 10),
+("Hamburguesa", 10, 8),
+("Kebab", 10, 6),
+("Ensalada", 10, 4);
+
+
+INSERT INTO ingredientes (Nombre, Calorias) VALUES
+("Tomate", 20),
+("Queso", 30),
+("Carne", 40),
+("Lechuga", 10),
+("Pan", 50),
+("Salsa", 20),
+("Patatas", 30),
+("Cebolla", 10);
+
+INSERT INTO comidas_ingredientes (idComida, idIngrediente, Cantidad) VALUES
+(1, 1, 1),
+(1, 2, 1),
+(1, 3, 1),
+(1, 5, 1),
+(1, 6, 1),
+(1, 8, 1),
+(2, 1, 1),
+(2, 2, 1),
+(2, 3, 1),
+(2, 4, 1),
+(2, 5, 1),
+(2, 6, 1),
+(2, 7, 1),
+(2, 8, 1),
+(3, 1, 1),
+(3, 3, 1),
+(3, 4, 1),
+(3, 5, 1),
+(4, 1, 1),
+(4, 2, 1),
+(4, 4, 1),
+(4, 6, 1),
+(4, 8, 1);

@@ -37,6 +37,9 @@ document.getElementById("clearList").addEventListener("click", function () {
     document.getElementById("listItem").innerHTML = "";
     alimentos = [];
     document.cookie = "alimentos=" + alimentos;
+    
+    //borrar cookies
+    document.cookie = "alimentos=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 });
 
 

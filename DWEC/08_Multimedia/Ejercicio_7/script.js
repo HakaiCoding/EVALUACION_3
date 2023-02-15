@@ -8,6 +8,7 @@ const startBtn = document.getElementById("start-btn");
 const endBtn = document.getElementById("end-btn");
 const volumeRange = document.getElementById("volume-range");
 const progressBar = document.getElementById("progress-bar");
+const fullScreen = document.getElementById("fullscreen-btn");
 
 playBtn.addEventListener("click", () => {
     video.play();
@@ -45,4 +46,8 @@ volumeRange.addEventListener("input", () => {
 video.addEventListener("timeupdate", () => {
     const progress = video.currentTime / video.duration;
     progressBar.innerHTML = `<span style="width: ${progress * 100}%"></span>`;
+});
+
+fullScreen.addEventListener("click", () => {
+    video.requestFullscreen();
 });

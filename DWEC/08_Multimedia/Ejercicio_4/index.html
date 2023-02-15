@@ -5,54 +5,77 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
-        audio,
-        button {
-            transition: all 0.5s linear;
-            box-shadow: 2px 2px 4px 0px #006773;
-            border-radius: 7px;
-            padding: 0, 5%;
+        body {
+            font-family: Arial, sans-serif;
         }
 
         section {
-            padding: 1%;
-            margin-left: 1%;
-            margin-top: 1%;
-            border: #006773;
-            border-style: groove;
-            border-radius: 7px;
-            display: flexbox;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, #FFB88C, #DE6262);
+        }
+
+        .button-panel {
+            display: flex;
             flex-wrap: wrap;
-            width: min-content;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 0 auto;
+            max-width: 400px;
         }
 
-        section>audio {
-            width: 239pt;
+        audio {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 30px;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(to right, #FFB88C, #DE6262);
+            color: #fff;
         }
 
-        section:hover {
-            transition: all 0.5s linear;
-            box-shadow: 2px 2px 4px 0px #c7d8da;
+        audio:hover {
             transform: scale(1.05);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
         }
 
-        audio:hover,
-        audio:focus,
-        audio:active,
+        button {
+            display: block;
+            padding: 15px 30px;
+            background-color: #9FB9D4;
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
         button:hover {
-            box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
-            transform: scale(1.05);
+            background-color: #1E91D6;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
         }
     </style>
+
+
 </head>
 
 <body>
     <section>
         <audio controls id="player" src="Aretha.mp3"></audio>
-        <button onclick="document.getElementById('player').play()">Play</button>
-        <button onclick="document.getElementById('player').pause()">Pausa</button>
-        <button onclick="document.getElementById('player').volume+=0.1">+ Volumen</button>
-        <button onclick="document.getElementById('player').volume-=0.1">- Volumen</button>
-        <button onclick="modiEstado()">Silenciar</button>
+        <div class="button-panel">
+            <button onclick="document.getElementById('player').play()">Play</button>
+            <button onclick="document.getElementById('player').pause()">Pausa</button>
+            <button onclick="document.getElementById('player').volume+=0.1">+ Volumen</button>
+            <button onclick="document.getElementById('player').volume-=0.1">- Volumen</button>
+            <button onclick="modiEstado()">Silenciar</button>
+        </div>
         <script>
             var estado = document.getElementById('player').muted
             function modiEstado() {

@@ -12,6 +12,11 @@ body {
     margin: 0 auto;
 }
 
+#volume-range {
+    width: 90px;
+    height: 10px;
+}
+
 #progress-bar {
     width: 640px;
     height: 5px;

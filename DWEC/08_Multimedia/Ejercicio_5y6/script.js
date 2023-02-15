@@ -47,13 +47,16 @@ for (let i = 0; i < songs.length; i++) {
     songList.appendChild(song);
 
     //Evento click a cada elemento de la lista
+    let currentSong = document.getElementById("current-song");
+    currentSong.style.color = "black";
     song.addEventListener("click", function (event) {
         event.target.style.color = "yellow";
 
         //Cambia el texto del elemento currentSong
-        let currentSong = document.getElementById("current-song");
+        currentSong = document.getElementById("current-song");
         currentSong.innerHTML = "Reproduciendo: ";
         currentSong.innerHTML += event.target.innerHTML;
+        currentSong.style.color = "#732c75";
 
         //Cambia el atributo src del elemento audio
         audio = document.getElementById("player");
