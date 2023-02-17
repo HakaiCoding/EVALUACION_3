@@ -1,0 +1,35 @@
+.wrapper {
+    border: 1px solid red;
+    width: 60%;
+    position: relative;
+    margin: 0 auto;
+
+}
+
+.wrapper ul {
+    padding: 40px;
+}
+
+.wrapper li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.wrapper ul p {
+    color: grey;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.addToPlaylist {
+    border: 1px solid white;
+    padding: 10px;
+    background-color: #4CAF50;
+    border-radius: 8%;
+    margin-top: 5%;
+    cursor: pointer;
+}
+
+.addToPlaylist:hover {
+    background-color: #3e8e41;
+}
