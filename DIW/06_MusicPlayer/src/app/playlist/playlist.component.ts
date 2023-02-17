@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ActivatedRoute } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-playlist',
@@ -8,10 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlaylistComponent implements OnInit {
 
+  playlist: any[] = [];
 
-  constructor() { }
 
-  ngOnInit(): void {
+  constructor(private route: ActivatedRoute) { }
+
+  ngOnInit() {
+    const playlistJSON = this.route.snapshot.queryParams['playlist'];
+    this.playlist = JSON.parse(playlistJSON);
   }
 
 }

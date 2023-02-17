@@ -1,14 +1,13 @@
 <div class="wrapper">
+    <h3>Canciones disponibles</h3>
     <ul>
-        <h3>Canciones disponibles</h3>
-        <p>Haz click sobre la canción para añadirla a tu playlist</p><br>
-
         <ng-container *ngFor="let song of songs">
-            <li (click)="addToList(song.name, song.src)">{{song.name}}</li>
+            <div class="song-container">
+                <li>{{song.name}}</li><img (click)="addToList(song.name, song.src, song.status)" src="{{song.status}}">
+            </div>
         </ng-container>
-
-        <ng-container *ngFor="let song of playlist">
-            <p>{{song.name}}</p>
-        </ng-container>
+        <button class="newPlaylist" (click)="newPlaylist()">Crear Nueva Playlist</button>
     </ul>
+
+    
 </div>

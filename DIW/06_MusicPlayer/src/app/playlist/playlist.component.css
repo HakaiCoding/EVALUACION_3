@@ -1,0 +1,43 @@
+.wrapper {
+    background: linear-gradient(to right, #FFB88C, #aa4ead) !important;
+    width: 60%;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 5%;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 24px 7px rgba(140, 61, 140, 1);
+    -moz-box-shadow: 0px 0px 24px 7px rgba(140, 61, 140, 1);
+    box-shadow: 0px 0px 24px 7px rgba(140, 61, 140, 1);
+}
+
+.wrapper h3 {
+    font-size: 1.5em;
+    padding: 20px;
+    color: rgb(127, 63, 187);
+    font-weight: bolder;
+}
+
+.wrapper p {
+    font-size: 1.2em;
+    padding: 20px;
+    font-weight: bolder;
+    color: black;
+}
+
+.song-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 5px;
+}
+
+.song-container audio {
+    width: 300px;
+    height: 25px;
+    border: 2px solid black;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 24px 1px rgba(140, 61, 140, 1);
+    -moz-box-shadow: 0px 0px 24px 1px rgba(140, 61, 140, 1);
+    box-shadow: 0px 0px 24px 1px rgba(140, 61, 140, 1);
+}

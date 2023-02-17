@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 export class SongsService {
 
   songs = [
-    { name: 'In My Head', src: 'assets/InMyHead.mp3' },
-    { name: 'Righteous', src: 'assets/Righteous.mp3' },
+    { name: 'InMyHead', src: 'assets/InMyHead.mp3', status: "../../assets/plus.png" },
+    { name: 'Righteous', src: 'assets/Righteous.mp3', status: "../../assets/plus.png" },
   ];
 
   getSongs()  {

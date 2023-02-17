@@ -1,35 +1,70 @@
 .wrapper {
-    border: 1px solid red;
+    background: linear-gradient(to right, #FFB88C, #aa4ead) !important;
     width: 60%;
     position: relative;
     margin: 0 auto;
-
+    margin-top: 5%;
+    padding: 20px;
+    -webkit-box-shadow: 0px 0px 24px 7px rgba(140, 61, 140, 1);
+    -moz-box-shadow: 0px 0px 24px 7px rgba(140, 61, 140, 1);
+    box-shadow: 0px 0px 24px 7px rgba(140, 61, 140, 1);
 }
 
 .wrapper ul {
     padding: 40px;
 }
 
+.wrapper h3 {
+    font-size: 1.5em;
+    padding: 20px;
+    color: rgb(127, 63, 187);
+    font-weight: bolder;
+}
+
 .wrapper li {
+    font-size: 1.2em;
+    font-weight: bolder;
     padding: 10px;
+    margin-left: 2%;
+    color: black;
+}
+
+.song-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 5px;
+}
+
+.song-container img {
+    width: 25px;
+    height: 25px;
     cursor: pointer;
+    transition: 0.5s;
 }
 
-.wrapper ul p {
-    color: grey;
-    font-style: italic;
-    font-size: 0.9em;
+.song-container img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 
-.addToPlaylist {
-    border: 1px solid white;
-    padding: 10px;
-    background-color: #4CAF50;
-    border-radius: 8%;
+.newPlaylist {
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-color: green;
+    color: whitesmoke;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 7px;
     margin-top: 5%;
     cursor: pointer;
+    transition: 0.5s;
 }
 
-.addToPlaylist:hover {
-    background-color: #3e8e41;
+
+.newPlaylist:hover {
+    background-color: rgb(3, 95, 23);
+    transition: 0.5s;
+    font-size: 1.05em;
 }

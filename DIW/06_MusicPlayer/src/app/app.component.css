@@ -20,3 +20,8 @@
 .navbar a {
     text-decoration: none;
 }
+
+.navbar a:hover {
+    font-size: 1.2em;
+    color: rgb(54, 211, 211);
+}

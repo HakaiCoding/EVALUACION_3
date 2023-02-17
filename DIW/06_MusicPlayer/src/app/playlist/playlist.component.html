@@ -1,1 +1,8 @@
-<p>playlist works!</p>
+<div class="wrapper">
+    <h3>My Playlist</h3>
+    <ng-container *ngFor="let song of playlist">
+        <div class="song-container">
+            <p>{{song.name}}</p><audio src="{{song.src}}" controls></audio>
+        </div>
+    </ng-container>
+</div>
