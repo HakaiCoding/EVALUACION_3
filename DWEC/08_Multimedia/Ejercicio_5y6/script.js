@@ -74,6 +74,20 @@ for (let i = 0; i < songs.length; i++) {
 
 }
 
+//Evento ended al elemento audio para que cambie a la siguiente canción
+audio.addEventListener("ended", function() {
+    let currentSongIndex = songs.indexOf(audio.getAttribute("src").replace("Music/", ""));
+    let nextSongIndex = (currentSongIndex + 1) % songs.length;
+    let nextSong = "Music/" + songs[nextSongIndex];
+    audio.setAttribute("src", nextSong);
+    audio.play();
+
+    //Cambia el color del elemento de la lista de la siguiente canción a amarillo
+    songList.children[currentSongIndex].style.color = "black";
+    songList.children[nextSongIndex].style.color = "yellow";
+});
+
+
 audio.addEventListener("timeupdate", function () {
     let progress = document.getElementById("progress");
     progress.value = audio.currentTime / audio.duration;
