@@ -1,29 +1,59 @@
-/* || general styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 html {
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 main {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
-  }
-  
-  .col {
-    border: 1px solid #ccc;
-    padding: 10px;
-  }
+  display: grid;
+  width: 100%;
+  margin-top: 2%;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 10px;
+  text-align: center;
+}
 
-p {
-    margin: 0;
+.card {
+  border: 2px solid black;
+  padding: 10px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.card p {
+  line-height: 1.2em;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.card button:hover {
+  background-color: black;
+  color: white;
+  transition: 1s;
+}
+
+.impar {
+  background-color: #f1f1f1;
+}
+
+.par {
+  background-color: #6d6a6a;
 }
 
 .error {
-    background-color: red;
-    color: white;
-    font-weight: bold;
+  background-color: red;
+  color: white;
+  font-weight: bold;
 }
-
-
-  
