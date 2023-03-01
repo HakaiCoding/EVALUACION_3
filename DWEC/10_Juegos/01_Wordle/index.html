@@ -1,60 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wordle</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <h1>Wordle</h1>
+
     <div id="main">
-        <h1>Wordle</h1>
         <div id="game-box">
-            <div id="first-row">
-                <div id="first-row-first-column" class="box"></div>
-                <div id="first-row-second-column" class="box"></div>
-                <div id="first-row-third-column" class="box"></div>
-                <div id="first-row-fourth-column" class="box"></div>
-                <div id="first-row-fifth-column" class="box"></div>
+            <div id="game-first-row" class="game-row">
+                <div id="first-row-first-column" class="letter-box"></div>
+                <div id="first-row-second-column" class="letter-box"></div>
+                <div id="first-row-third-column" class="letter-box"></div>
+                <div id="first-row-fourth-column" class="letter-box"></div>
+                <div id="first-row-fifth-column" class="letter-box"></div>
             </div>
-            <div id="second-row">
-                <div id="second-row-first-column" class="box"></div>
-                <div id="second-row-second-column" class="box"></div>
-                <div id="second-row-third-column" class="box"></div>
-                <div id="second-row-fourth-column" class="box"></div>
-                <div id="second-row-fifth-column" class="box"></div>
+            <div id="game-second-row" class="game-row">
+                <div id="second-row-first-column" class="letter-box"></div>
+                <div id="second-row-second-column" class="letter-box"></div>
+                <div id="second-row-third-column" class="letter-box"></div>
+                <div id="second-row-fourth-column" class="letter-box"></div>
+                <div id="second-row-fifth-column" class="letter-box"></div>
             </div>
-            <div id="third-row">
-                <div id="third-row-first-column" class="box"></div>
-                <div id="third-row-second-column" class="box"></div>
-                <div id="third-row-third-column" class="box"></div>
-                <div id="third-row-fourth-column" class="box"></div>
-                <div id="third-row-fifth-column" class="box"></div>
+            <div id="game-third-row" class="game-row">
+                <div id="third-row-first-column" class="letter-box"></div>
+                <div id="third-row-second-column" class="letter-box"></div>
+                <div id="third-row-third-column" class="letter-box"></div>
+                <div id="third-row-fourth-column" class="letter-box"></div>
+                <div id="third-row-fifth-column" class="letter-box"></div>
             </div>
-            <div id="fourth-row">
-                <div id="fourth-row-first-column" class="box"></div>
-                <div id="fourth-row-second-column" class="box"></div>
-                <div id="fourth-row-third-column" class="box"></div>
-                <div id="fourth-row-fourth-column" class="box"></div>
-                <div id="fourth-row-fifth-column" class="box"></div>
+            <div id="game-fourth-row" class="game-row">
+                <div id="fourth-row-first-column" class="letter-box"></div>
+                <div id="fourth-row-second-column" class="letter-box"></div>
+                <div id="fourth-row-third-column" class="letter-box"></div>
+                <div id="fourth-row-fourth-column" class="letter-box"></div>
+                <div id="fourth-row-fifth-column" class="letter-box"></div>
             </div>
-            <div id="fifth-row">
-                <div id="fifth-row-first-column" class="box"></div>
-                <div id="fifth-row-second-column" class="box"></div>
-                <div id="fifth-row-third-column" class="box"></div>
-                <div id="fifth-row-fourth-column" class="box"></div>
-                <div id="fifth-row-fifth-column" class="box"></div>
+            <div id="game-fifth-row" class="game-row">
+                <div id="fifth-row-first-column" class="letter-box"></div>
+                <div id="fifth-row-second-column" class="letter-box"></div>
+                <div id="fifth-row-third-column" class="letter-box"></div>
+                <div id="fifth-row-fourth-column" class="letter-box"></div>
+                <div id="fifth-row-fifth-column" class="letter-box"></div>
             </div>
-            <div id="sixth-row">
-                <div id="sixth-row-first-column" class="box"></div>
-                <div id="sixth-row-second-column" class="box"></div>
-                <div id="sixth-row-third-column" class="box"></div>
-                <div id="sixth-row-fourth-column" class="box"></div>
-                <div id="sixth-row-fifth-column" class="box"></div>
+            <div id="game-sixth-row" class="game-row">
+                <div id="sixth-row-first-column" class="letter-box"></div>
+                <div id="sixth-row-second-column" class="letter-box"></div>
+                <div id="sixth-row-third-column" class="letter-box"></div>
+                <div id="sixth-row-fourth-column" class="letter-box"></div>
+                <div id="sixth-row-fifth-column" class="letter-box"></div>
+            </div>
+        </div>
+        <div id="keyboard-box">
+            <div id="keyboard-first-row" class="keyboard-row">
+                <div id="first-row-first-column" class="key-box">Q</div>
+                <div id="first-row-second-column" class="key-box">W</div>
+                <div id="first-row-third-column" class="key-box">E</div>
+                <div id="first-row-fourth-column" class="key-box">R</div>
+                <div id="first-row-fifth-column" class="key-box">T</div>
+                <div id="first-row-sixth-column" class="key-box">Y</div>
+                <div id="first-row-seventh-column" class="key-box">U</div>
+                <div id="first-row-eighth-column" class="key-box">I</div>
+                <div id="first-row-ninth-column" class="key-box">O</div>
+                <div id="first-row-tenth-column" class="key-box">P</div>
+            </div>
+            <div id="keyboard-second-row" class="keyboard-row">
+                <div id="second-row-first-column" class="key-box">A</div>
+                <div id="second-row-second-column" class="key-box">S</div>
+                <div id="second-row-third-column" class="key-box">D</div>
+                <div id="second-row-fourth-column" class="key-box">F</div>
+                <div id="second-row-fifth-column" class="key-box">G</div>
+                <div id="second-row-sixth-column" class="key-box">H</div>
+                <div id="second-row-seventh-column" class="key-box">J</div>
+                <div id="second-row-eighth-column" class="key-box">K</div>
+                <div id="second-row-ninth-column" class="key-box">L</div>
+                <div id="second-row-tenth-column" class="key-box">Ñ</div>
+            </div>
+            <div id="keyboard-third-row" class="keyboard-row">
+                <div id="third-row-first-column" class="key-box">Delete</div>
+                <div id="third-row-second-column" class="key-box">Z</div>
+                <div id="third-row-third-column" class="key-box">X</div>
+                <div id="third-row-fourth-column" class="key-box">C</div>
+                <div id="third-row-fifth-column" class="key-box">V</div>
+                <div id="third-row-sixth-column" class="key-box">B</div>
+                <div id="third-row-seventh-column" class="key-box">N</div>
+                <div id="third-row-eighth-column" class="key-box">M</div>
+                <div id="third-row-ninth-column" class="key-box">Enter</div>
             </div>
         </div>
     </div>
-
+    <script src="script.js"></script>
 </body>
+
 </html>
