@@ -1,5 +1,5 @@
 h1 {
-    border: 1px solid green;
+
     text-align: center;
     font-size: 2em;
     color: #000;
@@ -8,7 +8,7 @@ h1 {
 }
 
 #main {
-    border: 1px solid purple;
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -20,12 +20,12 @@ h1 {
 /* GAME */
 
 #game-box {
-    border: 1px solid red;
+
     padding: 20px;
 }
 
 .game-row {
-    border: 1px solid blue;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,17 +38,23 @@ h1 {
     border-radius: 5%;
     width: 60px;
     height: 60px;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* KEYBOARD */
 
 #keyboard-box {
-    border: 1px solid red;
+
     padding: 10px;
 }
 
 .keyboard-row {
-    border: 1px solid blue;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,4 +76,8 @@ h1 {
     cursor: pointer;
     display: grid;
     place-items: center;
+}
+
+.focused {
+    border: 5px solid purple;
 }
